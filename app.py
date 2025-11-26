@@ -17,7 +17,7 @@ clean_text = normalize_text
 
 try:
    model = joblib.load('Model.pkl')
-    st.sidebar.success("Modele charge avec succes")
+   st.sidebar.success("Modele charge avec succes")
 except Exception as e:
     st.error(f"Erreur lors du chargement: {e}")
     st.stop()
@@ -61,5 +61,6 @@ if st.button('Lancer la prediction'):
             st.success(f"Risque FAIBLE de maladie cardiaque (Probabilite: {proba[0][0]:.1%})")
     except Exception as e:
         st.error(f"Erreur lors de la prediction: {e}")
+
 
 
